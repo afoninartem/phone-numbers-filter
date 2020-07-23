@@ -1,49 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Extraction</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/fonts.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
-
 <body>
-  <header class="header">
-    <div class="wrapper">
-      <div class="header__title">
-        Извлечение номеров клиентов, совершивших покупку
-      </div>
-    </div>
-  </header>
-  <div class="file-loader">
-    <div class="wrapper">
-      <div class="full-list-loader">
-        <p>
-          Полный список номеров:
-        </p>
-        <input type="file" name="full-list" id="full-list">
-        <p class="full-list-length"></p>
-      </div>
-      <div class="exception-list-loader">
-        <p>
-          Список исключений (открытые наработки, отказы):
-        </p>
-        <input type="file" name="exception-list" id="exception-list">
-        <p class="exception-list-length"></p>
-      </div>
-    </div>
-  </div>
-  <div class="result">
-    <div class="wrapper">
-      <button id="result">
-        Скачать
-      </button>
-    </div>
+  <form action="" class="upload">
+    <p>Файл должен содержать два столбца: <a class="tooltip-1" href="">первый - телефоны, второй - ФИО<span><img src="./img/two-columns.PNG" alt="excel menu save as"></span></a>. Наличие заголовка не играет роли. Формат файла - CSV (разделители - запятые). <a class="tooltip-2" href="">//можно сохранить из Экселя<span><img src="./img/choose-your-format.PNG" alt="excel menu save as"></span></a></p>
+    <label for="list">Загрузить список телефонов в формате CSV:</label>
+    <input type="file" name="full-list" id="list">
+  </form>
+  <button type="button" id="download">Скачать</button>
+  <div class="check">
+    <ol class="check__list"></ol>
   </div>
   <script src="js.js"></script>
 </body>
-
 </html>
